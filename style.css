@@ -3,7 +3,48 @@
     padding: 0;
 }
 
-button {
-    width: 25vw;
-    height: 25vw;
+.sequencer {
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: fit-content;
+  margin: auto;
+}
+
+.note {
+  height: 100%;
+  width: 12.5%;
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: black;
+  outline: none;
+  background: none;
+}
+
+.sequencer-row {
+  display: inline-block;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+  height: calc(16.67vh - 8px);
+}
+
+
+.note-is-active {
+    background-color: yellow;
+  }
+  
+
+.toggle-play {
+  display: flex;
+}
+
+.play-button {
+    width: 100%;
+    height: 48px;
+    margin: auto;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    border: none;
 }
