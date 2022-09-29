@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body{
+    background-color: black;
+}
+
 .sequencer {
   width: 100%;
   display: grid;
@@ -16,9 +20,14 @@
   width: 12.5%;
   border-style: solid;
   border-width: 0.5px;
+  border-radius: 3vw;
   border-color: black;
   outline: none;
   background: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: black;
+  color:white;
 }
 
 .sequencer-row {
@@ -29,9 +38,9 @@
   height: calc(16.67vh - 8px);
 }
 
-
 .note-is-active {
-    background-color: yellow;
+    background-color: white;
+    color: black;
   }
   
 
@@ -43,8 +52,11 @@
     width: 100%;
     height: 48px;
     margin: auto;
-    font-size: 16px;
+    border-style: solid;
+    border-width: 0.5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-color: black;
     background-color: black;
     color: white;
-    border: none;
 }

@@ -9,7 +9,7 @@ const makeSynths = (count) => {
         "F4": "Roland TR-909/RIM127.WAV",
         "Eb4": "Roland TR-909/HT0D0.WAV",
         "C4": "Roland TR-909/RIDEDA.WAV", 
-        "Bb3": "Roland TR-909/HHCD2.WAV",
+        "Bb3": "Roland TR-909/HHOD0.WAV",
         "Ab3": "Roland TR-909/HANDCLP1.WAV", 
         "F3": "Roland TR-909/BTAAADA.WAV"
       },
@@ -154,12 +154,12 @@ const configPlayButton = () => {
 
     if (playing) {
       e.target.innerText = "► Play";
-      e.target.style.backgroundColor = "black";
+      e.target.style.color = "white";
       Tone.Transport.stop();
       playing = false;
     } else {
       e.target.innerText = "■ Stop";
-      e.target.style.backgroundColor = "blue";
+      e.target.style.color = "red";
       Tone.Transport.start();
       playing = true;
     }
