@@ -1,3 +1,5 @@
+import * as Tone from "https://cdn.skypack.dev/tone";
+
 const makeSynths = (count) => {
   // declare array to store synths
   const synths = [];
@@ -87,7 +89,6 @@ const makeSequencer = () => {
 
     row.forEach((note, noteIndex) => {
       const button = document.createElement("button");
-      console.log(note);
       if (note.note == "F4"){
         button.innerHTML = "Rim"
       }
