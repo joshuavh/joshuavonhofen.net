@@ -8,12 +8,14 @@ const makeSynths = (count) => {
   for (let i = 0; i < count; i++) {
     let synth = new Tone.Sampler({
       urls: {
-        "F4": "sounds/RKTD2_Noise_10.mp3",
-        "Eb4": "sounds/RKTD2_Perc_04.mp3",
-        "C4": "sounds/RKTD2_Hihat_04.mp3", 
-        "Bb3": "sounds/RKTD2_Clap_04.mp3",
-        "Ab3": "sounds/RKTD2_Kicks_99.mp3", 
-        "F3": "sounds/RKTD2_Bass_08_A.mp3"
+        "C4": "sounds/RKTD2_Noise_10.mp3",
+        "D4": "sounds/RKTD2_Chord_02.mp3",
+        "E4": "sounds/RKTD2_Perc_04.mp3",
+        "F4": "sounds/RKTD2_Hihat_95.mp3",
+        "G4": "sounds/RKTD2_Hihat_04.mp3", 
+        "A4": "sounds/RKTD2_Clap_70.mp3",
+        "B4": "sounds/RKTD2_Kicks_99.mp3", 
+        "C3": "sounds/RKTD2_Bass_08_A.mp3"
       },
       release: 1,
     }).toDestination();
@@ -51,10 +53,10 @@ const makeGrid = (notes) => {
   return rows;
 };
 
-const synths = makeSynths(6);
+const synths = makeSynths(8);
 
 // declaring the notes for each row
-const notes = ["F4", "Eb4", "C4", "Bb3", "Ab3", "F3"];
+const notes = ["C4", "D4", "E4", "F4", "G4", "A4", "B4", "C3"];
 let grid = makeGrid(notes);
 let beat = 0;
 let started = false;
@@ -101,22 +103,29 @@ const makeSequencer = () => {
 
     row.forEach((note, noteIndex) => {
       const button = document.createElement("button");
-      if (note.note == "F4"){
-        button.innerHTML = "FX"
+      ["C4", "D4", "E4", "F4", "G4", "A4", "B4", "C3"];
+      if (note.note == "C4"){
+        button.innerHTML = "SFX"
       }
-      if (note.note == "Eb4"){
+      if (note.note == "D4"){
+        button.innerHTML = "Tone"
+      }
+      if (note.note == "E4"){
         button.innerHTML = "Perc"
       }
-      if (note.note == "C4"){
-        button.innerHTML = "Hat"
+      if (note.note == "F4"){
+        button.innerHTML = "HH1"
       }
-      if (note.note == "Bb3"){
+      if (note.note == "G4"){
+        button.innerHTML = "HH2"
+      }
+      if (note.note == "A4"){
         button.innerHTML = "Clap"
       }
-      if (note.note == "Ab3"){
+      if (note.note == "B4"){
         button.innerHTML = "Kick"
       }
-      if (note.note == "F3"){
+      if (note.note == "C3"){
         button.innerHTML = "Bass"
       }
 

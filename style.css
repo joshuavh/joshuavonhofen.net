@@ -15,11 +15,16 @@ body{
 }
 
 .sequencer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex-grow: 1;
-  height: auto;
+  flex-grow: 0;
+  width: 800px;
+  height: 800px;
 }
 
 .sequencer-row {
@@ -37,27 +42,33 @@ body{
   border-width: 0.5px;
   border-color: black;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: 3px;
   background-color: white;
   color: black;
-  transition: ease-out 75ms;
+  transition: ease-out 80ms;
 }
 
 .note-is-active {
-    background-color: rgb(167, 171, 247);
-    border-radius: 8vw;
+    background-color: rgb(149, 146, 254);
+    border-radius: 50% 50%;
     color: black;
 }
 
 .playing{
-    background-color: rgb(211, 255, 157);
-    border-radius: 4vw;
+    background-color: rgb(255, 125, 125);
+    border-radius: 00% 00% 50% 50%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
+
+  .sequencer{
+    flex-grow: 1;
+    width: 100vw;
+    height: 100vw;
+  }
   .note{
-    font-size: 12px;
+    font-size: 10px;
     letter-spacing: 1px;
   }
 }
