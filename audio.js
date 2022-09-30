@@ -8,12 +8,12 @@ const makeSynths = (count) => {
   for (let i = 0; i < count; i++) {
     let synth = new Tone.Sampler({
       urls: {
-        "F4": "sounds/RKTD2_Noise_10.wav",
-        "Eb4": "sounds/RKTD2_Perc_04.wav",
-        "C4": "sounds/RKTD2_Hihat_04.wav", 
-        "Bb3": "sounds/RKTD2_Clap_04.wav",
-        "Ab3": "sounds/RKTD2_Kicks_99.wav", 
-        "F3": "sounds/RKTD2_Bass_08_A.wav"
+        "F4": "sounds/RKTD2_Noise_10.mp3",
+        "Eb4": "sounds/RKTD2_Perc_04.mp3",
+        "C4": "sounds/RKTD2_Hihat_04.mp3", 
+        "Bb3": "sounds/RKTD2_Clap_04.mp3",
+        "Ab3": "sounds/RKTD2_Kicks_99.mp3", 
+        "F3": "sounds/RKTD2_Bass_08_A.mp3"
       },
       release: 1,
     }).toDestination();
