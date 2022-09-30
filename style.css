@@ -18,7 +18,8 @@ body{
 .sequencer-row {
     display: inline-block;
     white-space: nowrap;
-    height: calc(16.67vh - 8px);
+    height: 16.67vh;
+    /* height: calc(16.67vh - 8px); */
   }
   
 
@@ -34,14 +35,20 @@ body{
   letter-spacing: 1px;
   background-color: white;
   color:black;
-  transition: ease-out 100ms;
+  transition: ease-out 50ms;
 }
 
 .note-is-active {
-    background-color: yellow;
-    border-radius: 3vw;
+    background-color: rgb(141, 147, 250);
+    border-radius: 8vw;
     color: black;
-  }
+}
+
+.playing{
+    background-color: rgb(177, 255, 141);
+    border-radius: 4vw;
+
+}
   
 
 .toggle-play {

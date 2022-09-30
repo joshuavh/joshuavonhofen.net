@@ -59,6 +59,10 @@ let grid = makeGrid(notes);
 let beat = 0;
 let playing = false;
 let started = false;
+var toneButtons = document.getElementsByClassName('note');
+let activeNote;
+let previousNote;
+
 
 const configLoop = () => {
 
@@ -66,10 +70,19 @@ const configLoop = () => {
     grid.forEach((row, index) => {
       let synth = synths[index];
       let note = row[beat];
-      if (note.isActive) {
-        synth.triggerAttackRelease(note.note, "8n", time);
+      if (beat > 0){
+        previousNote = beat - 1 + index*8;
       }
-    });
+      else {previousNote = 7 + index*8}
+
+      if (note.isActive) {
+        activeNote = beat + index*8;
+        synth.triggerAttackRelease(note.note, "8n", time);
+        toneButtons[activeNote].classList.add("playing");
+      }
+      toneButtons[previousNote].classList.remove("playing");
+    }
+    );
 
     beat = (beat + 1) % 8;
   };
@@ -143,29 +156,43 @@ const handleNoteClick = (clickedRowIndex, clickedNoteIndex, e) => {
   });
 };
 
+
 const configPlayButton = () => {
-  const button = document.getElementById("play-button");
-  button.addEventListener("click", (e) => {
+  document.body.addEventListener("click", (e) => {
     if (!started) {
       Tone.start();
       Tone.getDestination().volume.rampTo(-10, 0.001)
       configLoop();
       started = true;
-    }
-
-    if (playing) {
-      e.target.innerText = "► Play";
-      e.target.style.color = "white";
-      Tone.Transport.stop();
-      playing = false;
-    } else {
-      e.target.innerText = "■ Stop";
-      e.target.style.color = "red";
       Tone.Transport.start();
       playing = true;
     }
   });
 };
+
+// const configPlayButton = () => {
+//   const button = document.getElementById("play-button");
+//   button.addEventListener("click", (e) => {
+//     if (!started) {
+//       Tone.start();
+//       Tone.getDestination().volume.rampTo(-10, 0.001)
+//       configLoop();
+//       started = true;
+//     }
+
+//     if (playing) {
+//       e.target.innerText = "► Play";
+//       e.target.style.color = "white";
+//       Tone.Transport.stop();
+//       playing = false;
+//     } else {
+//       e.target.innerText = "■ Stop";
+//       e.target.style.color = "red";
+//       Tone.Transport.start();
+//       playing = true;
+//     }
+//   });
+// };
 
 /* configPlayButton();
 makeSequencer(); */
