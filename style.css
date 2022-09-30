@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    height: -webkit-fill-available;
 }
 
 body{
@@ -22,7 +23,6 @@ body{
     display: inline-block;
     white-space: nowrap;
     height: 16.67vh;
-    /* height: calc(16.67vh - 8px); */
   }
   
 
