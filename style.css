@@ -21,7 +21,7 @@ body{
 .sequencer-row {
     display: inline-block;
     white-space: nowrap;
-    height: 16.67vh;
+    height: 16.67%;
     /* height: calc(16.67vh - 8px); */
   }
   
