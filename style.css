@@ -16,11 +16,15 @@ body{
   margin: auto;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .sequencer-row {
     display: flex;
     flex-direction: row;
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
     /* height: 16.667vh; */
   }
   
@@ -28,6 +32,7 @@ body{
 .note {
   height: 100%;
   width: 100%;
+  flex-grow: 1;
   border-style: solid;
   border-width: 0.5px;
   border-color: black;
