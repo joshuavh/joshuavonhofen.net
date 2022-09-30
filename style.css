@@ -15,31 +15,31 @@ body{
   margin: auto;
 }
 
+.sequencer-row {
+    display: inline-block;
+    white-space: nowrap;
+    height: calc(16.67vh - 8px);
+  }
+  
+
 .note {
   height: 100%;
   width: 12.5%;
   border-style: solid;
   border-width: 0.5px;
-  border-radius: 3vw;
   border-color: black;
   outline: none;
   background: none;
   text-transform: uppercase;
   letter-spacing: 1px;
-  background-color: black;
-  color:white;
-}
-
-.sequencer-row {
-  display: inline-block;
-  white-space: nowrap;
-  margin: 0;
-  padding: 0;
-  height: calc(16.67vh - 8px);
+  background-color: white;
+  color:black;
+  transition: ease-out 100ms;
 }
 
 .note-is-active {
-    background-color: white;
+    background-color: yellow;
+    border-radius: 3vw;
     color: black;
   }
   
