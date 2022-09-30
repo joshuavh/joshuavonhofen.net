@@ -100,7 +100,7 @@ const makeSequencer = () => {
     seqRow.className = "sequencer-row";
 
     row.forEach((note, noteIndex) => {
-      const button = document.createElement("div");
+      const button = document.createElement("button");
       if (note.note == "F4"){
         button.innerHTML = "FX"
       }
