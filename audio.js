@@ -8,12 +8,12 @@ const makeSynths = (count) => {
   for (let i = 0; i < count; i++) {
     let synth = new Tone.Sampler({
       urls: {
-        "F4": "Roland TR-909/RIM127.WAV",
-        "Eb4": "Roland TR-909/HT0D0.WAV",
-        "C4": "Roland TR-909/RIDEDA.WAV", 
-        "Bb3": "Roland TR-909/HHOD0.WAV",
-        "Ab3": "Roland TR-909/HANDCLP1.WAV", 
-        "F3": "Roland TR-909/BTAAADA.WAV"
+        "F4": "sounds/RKTD2_Noise_10.wav",
+        "Eb4": "sounds/RKTD2_Perc_04.wav",
+        "C4": "sounds/RKTD2_Hihat_04.wav", 
+        "Bb3": "sounds/RKTD2_Clap_04.wav",
+        "Ab3": "sounds/RKTD2_Kicks_99.wav", 
+        "F3": "sounds/RKTD2_Bass_08_A.wav"
       },
       release: 1,
     }).toDestination();
@@ -87,7 +87,7 @@ const configLoop = () => {
     beat = (beat + 1) % 8;
   };
 
-  Tone.Transport.bpm.value = 120;
+  Tone.Transport.bpm.value = 128;
   Tone.Transport.scheduleRepeat(repeat, "8n");
 };
 
@@ -103,22 +103,22 @@ const makeSequencer = () => {
     row.forEach((note, noteIndex) => {
       const button = document.createElement("button");
       if (note.note == "F4"){
-        button.innerHTML = "Rim"
+        button.innerHTML = "FX"
       }
       if (note.note == "Eb4"){
-        button.innerHTML = "Tom"
+        button.innerHTML = "Perc"
       }
       if (note.note == "C4"){
-        button.innerHTML = "Ride"
-      }
-      if (note.note == "Bb3"){
         button.innerHTML = "Hat"
       }
-      if (note.note == "Ab3"){
+      if (note.note == "Bb3"){
         button.innerHTML = "Clap"
       }
-      if (note.note == "F3"){
+      if (note.note == "Ab3"){
         button.innerHTML = "Kick"
+      }
+      if (note.note == "F3"){
+        button.innerHTML = "Bass"
       }
 
       button.className = "note"
