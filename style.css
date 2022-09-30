@@ -37,22 +37,27 @@ body{
   border-width: 0.5px;
   border-color: black;
   text-transform: uppercase;
-  font-size: 12px;
-  letter-spacing: 2px;
+  font-size: 13px;
+  letter-spacing: 3px;
   background-color: white;
-  color:black;
-  transition: ease-out 50ms;
+  color: black;
+  transition: ease-out 75ms;
 }
 
 .note-is-active {
-    background-color: rgb(141, 147, 250);
+    background-color: rgb(167, 171, 247);
     border-radius: 8vw;
     color: black;
 }
 
+.playing{
+    background-color: rgb(211, 255, 157);
+    border-radius: 4vw;
+}
 
 @media only screen and (max-width: 600px) {
   .note{
+    font-size: 12px;
     letter-spacing: 1px;
   }
 }
