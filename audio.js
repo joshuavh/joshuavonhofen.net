@@ -57,7 +57,6 @@ const synths = makeSynths(6);
 const notes = ["F4", "Eb4", "C4", "Bb3", "Ab3", "F3"];
 let grid = makeGrid(notes);
 let beat = 0;
-let playing = false;
 let started = false;
 var toneButtons = document.getElementsByClassName('note');
 let activeNote;
@@ -101,7 +100,7 @@ const makeSequencer = () => {
     seqRow.className = "sequencer-row";
 
     row.forEach((note, noteIndex) => {
-      const button = document.createElement("button");
+      const button = document.createElement("div");
       if (note.note == "F4"){
         button.innerHTML = "FX"
       }
@@ -145,12 +144,7 @@ const handleNoteClick = (clickedRowIndex, clickedNoteIndex, e) => {
         else{
           e.target.classList.remove("note-is-active");
         }
-        
-        // e.target.className = classNames(
-        //   "note", 
-        //   { "note-is-active": !!note.isActive }, 
-        //   { "note-not-active": !note.isActive }
-        // );
+      
       }
     });
   });
@@ -165,37 +159,11 @@ const configPlayButton = () => {
       configLoop();
       started = true;
       Tone.Transport.start();
-      playing = true;
     }
   });
 };
 
-// const configPlayButton = () => {
-//   const button = document.getElementById("play-button");
-//   button.addEventListener("click", (e) => {
-//     if (!started) {
-//       Tone.start();
-//       Tone.getDestination().volume.rampTo(-10, 0.001)
-//       configLoop();
-//       started = true;
-//     }
 
-//     if (playing) {
-//       e.target.innerText = "► Play";
-//       e.target.style.color = "white";
-//       Tone.Transport.stop();
-//       playing = false;
-//     } else {
-//       e.target.innerText = "■ Stop";
-//       e.target.style.color = "red";
-//       Tone.Transport.start();
-//       playing = true;
-//     }
-//   });
-// };
-
-/* configPlayButton();
-makeSequencer(); */
 window.addEventListener("DOMContentLoaded", () => {
   configPlayButton();
 	makeSequencer();
