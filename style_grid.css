@@ -22,15 +22,11 @@ body{
   max-width: 800px;
   max-height: 800px;
   
-  display: inline-grid;
+  display: grid;
   grid-template-columns: repeat(8, auto);
-  grid-gap: 0;
 }
   
 .note {
-  justify-self: stretch;
-  align-self: center;
-
   border-style: solid;
   border-width: 0.5px;
   border-color: black;
@@ -45,7 +41,7 @@ body{
 
 .note-is-active {
     background-color: rgb(149, 146, 254);
-    border-radius: 999px;
+    border-radius: 48px;
     color: black;
 }
 
