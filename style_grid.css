@@ -35,28 +35,27 @@ body{
   font-size: 12px;
   letter-spacing: 3px;
   line-height: 200%;
-  background-color: white;
-  color: black;
   border-radius: 3px;
-
+  background-color: rgb(235, 235, 245);
+  color: black;
   transition: ease-out 120ms;
 }
 
 
 .note-is-active {
-    background-size: 500%; 
-    background-position: center;   
-    font-weight: bold;
-    
-    border-radius: 52px;
-    color: black;
+  background-size: 500%; 
+  background-position: center;   
+  font-weight: bold;
+  border-radius: 52px;
+  background-color: white;
+  color: black;
 }
 
 .playing{
-    background-color: rgb(149, 255, 57);
-    border-radius: 3px 3px 52px 52px;
-    font-size: 24px;
-    background-size: 100%;    
+  background-color: rgb(120, 255, 0);
+  border-radius: 3px 3px 52px 52px;
+  font-size: 24px;
+  background-size: 100%;    
 }
 
 @media only screen and (max-width: 800px) {
