@@ -1,3 +1,5 @@
+
+
 import * as Tone from "https://cdn.skypack.dev/tone";
 
 const makeSynths = (count) => {
@@ -93,13 +95,11 @@ const configLoop = () => {
 };
 
 let i = 0;
+let f = 0;
 
 const makeSequencer = () => {
   const sequencer = document.getElementById("sequencer");
   grid.forEach((row, rowIndex) => {
-    const seqRow = document.createElement("div");
-    seqRow.id = `rowIndex`;
-    seqRow.className = "sequencer-row";
 
     row.forEach((note, noteIndex) => {
       const button = document.createElement("button");
@@ -133,12 +133,11 @@ const makeSequencer = () => {
       button.addEventListener("click", function(e) {
         handleNoteClick(rowIndex, noteIndex, e);
       });
-
-      seqRow.appendChild(button);
+      sequencer.appendChild(button);
       i++;
+
     });
 
-    sequencer.appendChild(seqRow);
   });
 };
 
