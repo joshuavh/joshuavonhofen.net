@@ -37,20 +37,26 @@ body{
   line-height: 200%;
   background-color: white;
   color: black;
+  border-radius: 3px;
+
   transition: ease-out 120ms;
 }
 
+
 .note-is-active {
-    background-color: rgb(149, 146, 254);
-    border-radius: 48px;
+    background-size: 500%; 
+    background-position: center;   
+    font-weight: bold;
+    
+    border-radius: 52px;
     color: black;
 }
 
 .playing{
-    background-color: rgb(255, 125, 125);
-    border-radius: 0 0 40% 40%;
-    font-weight: bold;
-    font-size: 32px;
+    background-color: rgb(149, 255, 57);
+    border-radius: 3px 3px 52px 52px;
+    font-size: 24px;
+    background-size: 100%;    
 }
 
 @media only screen and (max-width: 800px) {
@@ -64,15 +70,8 @@ body{
     letter-spacing: 1px;
   }
 
-  .note-is-active {
-    border-radius: 25px;
-  }
-
   .playing{
-    background-color: rgb(255, 125, 125);
-    border-radius: 0 0 25px 25px;
-    font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 }
