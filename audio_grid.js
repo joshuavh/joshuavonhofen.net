@@ -10,10 +10,10 @@ const makeSynths = (count) => {
   for (let i = 0; i < count; i++) {
     let synth = new Tone.Sampler({
       urls: {
-        "C4": "sounds/RKTD2_Noise_10.mp3",
-        "D4": "sounds/RKTD2_Chord_02.mp3",
+        "C4": "sounds/Am_MusicStab_330_02.wav",
+        "D4": "sounds/Dm_ThrustStab_73_SP.wav",
         "E4": "sounds/RKTD2_Perc_04.mp3",
-        "F4": "sounds/RKTD1_Hihat_33.mp3",
+        "F4": "sounds/f9clht07.wav", 
         "G4": "sounds/oh01.mp3", 
         "A4": "sounds/RK_TD1_Clap_48.mp3",
         "B4": "sounds/RKTD2_Bass_08_A.mp3", 
@@ -108,16 +108,16 @@ const makeSequencer = () => {
         button.innerHTML = "SFX"
       }
       if (note.note == "D4"){
-        button.innerHTML = "Tone"
+        button.innerHTML = "Stab"
       }
       if (note.note == "E4"){
         button.innerHTML = "Perc"
       }
       if (note.note == "F4"){
-        button.innerHTML = "HH1"
+        button.innerHTML = "CHH"
       }
       if (note.note == "G4"){
-        button.innerHTML = "HH2"
+        button.innerHTML = "OHH"
       }
       if (note.note == "A4"){
         button.innerHTML = "Clap"
