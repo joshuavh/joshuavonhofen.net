@@ -13,9 +13,9 @@ const makeSynths = (count) => {
         "C4": "sounds/RKTD2_Noise_10.mp3",
         "D4": "sounds/RKTD2_Chord_02.mp3",
         "E4": "sounds/RKTD2_Perc_04.mp3",
-        "F4": "sounds/RKTD2_Hihat_95.mp3",
-        "G4": "sounds/RKTD2_Hihat_04.mp3", 
-        "A4": "sounds/RKTD2_Clap_70.mp3",
+        "F4": "sounds/RKTD1_Hihat_33.mp3",
+        "G4": "sounds/oh01.mp3", 
+        "A4": "sounds/RK_TD1_Clap_48.mp3",
         "B4": "sounds/RKTD2_Bass_08_A.mp3", 
         "C3": "sounds/RKTD2_Kicks_99.mp3"
       },
