@@ -1,18 +1,26 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Caudex', serif;
 }
 
 body{
+    background-color: black;
+    color: white;
     margin: 20px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
-p{
-    font-size:16px;
+h1{
+    font-size:24px;
+    font-weight: 400;
 }
 
 a{
-    font-size:16px;
-    color: blue;
+    font-size:24px;
+    color: rgb(142, 146, 255);
+    text-decoration: none;
+    font-style: italic;
 }
