@@ -1,3 +1,5 @@
+@import "compass/css3";
+
 *{
   margin: 0;
   padding: 0;
@@ -39,8 +41,8 @@ body{
   border-radius: 3px;
   background-color: rgb(240, 240, 240);
   color: black;
-  transition: ease-out
-  150ms;
+  transition: ease-in-out
+  180ms;
 }
 
 .note-is-active {
@@ -56,7 +58,7 @@ body{
   background-color: rgb(181, 252, 39);
   border-radius: 3px 3px 52px 52px;
   font-size: 24px;
-  background-size: 100%;    
+  background-size: 100%; 
 }
 
 .credits{
@@ -70,6 +72,7 @@ body{
   text-align: center;
   left: 50%;
   transform: translateX(-50%);
+  z-index: -1;
 }
 
 #top{

@@ -24,3 +24,12 @@ a{
     text-decoration: none;
     font-style: italic;
 }
+
+.hover{
+    display: none;
+}
+
+
+a:hover .hover{
+    display: inline-block;
+}
