@@ -10,7 +10,7 @@ const makeSynths = (count) => {
   for (let i = 0; i < count; i++) {
     let synth = new Tone.Sampler({
       urls: {
-        "C4": "sounds/Fm_SpaceKalimba_111_SP.mp3",
+        "C4": "sounds/RKTD1_Noise_04.mp3",
         "D4": "sounds/Dm_ThrustStab_73_SP.mp3",
         "E4": "sounds/RKTD2_Perc_04.mp3",
         "F4": "sounds/f9clht07.mp3", 
