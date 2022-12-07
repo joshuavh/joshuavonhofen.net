@@ -2,31 +2,40 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,height=device-height initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Joshua von Hofen</title>
-    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="landingpage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
   </head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WFMCMFW05V"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'G-WFMCMFW05V');
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WFMCMFW05V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WFMCMFW05V');
 </script>
+
   <body>
-    <h1>Joshua von Hofen - Web Experiments</h1>
-    <br>
-    <a href ="boomtschak/index.html" target="_blank">Step sequencer</a>
-    <br><br>
-    <a href ="https://www.joshuas.world/" target="_blank">Joshua's World</a>
-    <br><br>
-    <a href ="inkbleed/index.html" target="_blank">Ink Bleed</a>
+    <div id="portrait-container">
+      <img id="portrait" src="/img/portrait.jpeg" width="100" height="100"></img>
+      <h1>Joshua von Hofen</h1>
+      <p>Interaction Designer & Creative Coder</p>
+    </div>
+    <a class="link-container" id="firstLink" href="https://www.joshuas.world/" style="background-color: rgb(126, 131, 255);"><div class="link">Joshua's World</div></a>
+    <a class="link-container" href="boomtschak/index.html" style="background-color: greenyellow;"><civ class="link">Step Sequencer</div></a>
+    <a class="link-container" href="mailto:joshuavonhofen@gmail.com" style="background-color: white;"><div class="link">E-Mail</div></a>
+    <a class="link-container" href="https://instagram.com/joshua_v_h" style="  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);"><div class="link">Instagram</div></a>
+    <a class="link-container" href="https://www.linkedin.com/mwlite/in/joshua-von-hofen-b087aa193" style="background-color: rgb(0, 162, 255);"><div class="link">LinkedIn</div></a>
+    <script src="js/matter.js"></script>
+    <script src="physics.js"></script>
+  </div>
   </body>
 </html>
+
