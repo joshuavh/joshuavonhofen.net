@@ -7,37 +7,6 @@ if (buttonLength > 420){
 }
 
 
-window.addEventListener('deviceorientation', handleOrientation);
-
-
-function handleOrientation(event) {
-  const alpha = event.alpha;
-  console.log(alpha);
-  document.getElementById("alphaRotation").innerHTML = alpha;
-  const beta = event.beta;
-  const gamma = event.gamma;
-  // Do stuff...
-}
-
-function requestPermission() {
-    if (typeof DeviceMotionEvent.requestPermission === 'function') {
-      // Handle iOS 13+ devices.
-      DeviceMotionEvent.requestPermission()
-        .then((state) => {
-          if (state === 'granted') {
-            window.addEventListener('devicemotion', handleOrientation);
-          } else {
-            console.error('Request to access the orientation was rejected');
-          }
-        })
-        .catch(console.error);
-    } else {
-      // Handle regular non iOS 13+ devices.
-      window.addEventListener('devicemotion', handleOrientation);
-    }
-  }
-
-
 // module aliases
 var Engine = Matter.Engine,
     Render = Matter.Render,
@@ -183,3 +152,37 @@ Matter.Events.on(mouseConstraint, 'mouseup' || 'touchend', () => {
         location.href = linkto;
     }
 });
+
+
+window.addEventListener('deviceorientation', handleOrientation);
+
+
+function handleOrientation(event) {
+  const alpha = event.alpha;
+  document.getElementById("alphaRotation").innerHTML = alpha;
+  if (alpha < 180){
+    engine.world.gravity.x = -alpha/10;
+  }
+  else{
+    engine.world.gravity.x = (360-alpha)/10;
+  }
+  document.getElementById("alphaRotation").innerHTML = engine.world.gravity.x;
+}
+
+function requestPermission() {
+    if (typeof DeviceMotionEvent.requestPermission === 'function') {
+      // Handle iOS 13+ devices.
+      DeviceMotionEvent.requestPermission()
+        .then((state) => {
+          if (state === 'granted') {
+            window.addEventListener('devicemotion', handleOrientation);
+          } else {
+            console.error('Request to access the orientation was rejected');
+          }
+        })
+        .catch(console.error);
+    } else {
+      // Handle regular non iOS 13+ devices.
+      window.addEventListener('devicemotion', handleOrientation);
+    }
+  }
