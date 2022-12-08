@@ -67,18 +67,18 @@ for (let i = 0; i < 5; i++){
     prevBox = boxA;
 }
 
-var leftWall = Bodies.rectangle(-30, vh/2, 60, vh, { 
-    isStatic: true,
-    constraint: {
-        render: {visible: false}
-    } 
-});
-var rightWall = Bodies.rectangle(vw+30, vh/2, 60, vh, { 
-    isStatic: true,
-    constraint: {
-        render: {visible: false}
-    }  
-});
+// var leftWall = Bodies.rectangle(-30, vh/2, 60, vh, { 
+//     isStatic: true,
+//     constraint: {
+//         render: {visible: false}
+//     } 
+// });
+// var rightWall = Bodies.rectangle(vw+30, vh/2, 60, vh, { 
+//     isStatic: true,
+//     constraint: {
+//         render: {visible: false}
+//     }  
+// });
 
 let mouse = Matter.Mouse.create(render.canvas);
 let mouseConstraint = Matter.MouseConstraint.create(engine, {
@@ -90,7 +90,8 @@ let mouseConstraint = Matter.MouseConstraint.create(engine, {
 render.mouse = mouse;
 
 // add all of the bodies to the world
-Composite.add(engine.world, [boxB, leftWall, rightWall, mouseConstraint]);
+Composite.add(engine.world, [boxB, mouseConstraint]);
+// Composite.add(engine.world, [boxB, leftWall, rightWall, mouseConstraint])
 
 // run the renderer
 Render.run(render);
