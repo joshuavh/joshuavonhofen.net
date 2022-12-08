@@ -16,7 +16,9 @@ var Engine = Matter.Engine,
     Composite = Matter.Composite;
 
 // create an engine
-var engine = Engine.create();
+var engine = Engine.create({
+    gravity: {x: 0, y: 10},
+});
 
 // create a renderer
 var render = Render.create({
@@ -52,7 +54,7 @@ for (let i = 0; i < 5; i++){
         bodyA: boxA,
         bodyB: prevBox,
         length: 80,
-        stiffness: 0.04,
+        stiffness: 0.5,
         render: { 
             type: 'line', 
             anchors: false,
