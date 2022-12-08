@@ -167,7 +167,6 @@ function handleOrientation(event) {
   else{
     engine.world.gravity.x = (360-alpha)/90;
   }
-  document.getElementById("alphaRotation").innerHTML = engine.world.gravity.x;
 }
 
 function requestPermission() {
