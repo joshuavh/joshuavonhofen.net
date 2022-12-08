@@ -6,6 +6,32 @@ if (buttonLength > 420){
     buttonLength = 420;
 }
 
+function requestPermission() {
+    if (typeof DeviceMotionEvent.requestPermission === 'function') {
+      // Handle iOS 13+ devices.
+      DeviceMotionEvent.requestPermission()
+        .then((state) => {
+          if (state === 'granted') {
+            window.addEventListener('devicemotion', handleOrientation);
+          } else {
+            console.error('Request to access the orientation was rejected');
+          }
+        })
+        .catch(console.error);
+    } else {
+      // Handle regular non iOS 13+ devices.
+      window.addEventListener('devicemotion', handleOrientation);
+    }
+  }
+
+  function handleOrientation(event) {
+    const alpha = event.alpha;
+    console.log(alpha);
+    document.getElementById("alphaRotation").innerHTML = alpha;
+    const beta = event.beta;
+    const gamma = event.gamma;
+    // Do stuff...
+  }
 
 // module aliases
 var Engine = Matter.Engine,
