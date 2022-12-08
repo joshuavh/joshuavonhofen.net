@@ -163,10 +163,10 @@ window.addEventListener('deviceorientation', handleOrientation);
 function handleOrientation(event) {
   const alpha = event.alpha;
   if (alpha < 180){
-    engine.world.gravity.x = -alpha/90;
+    engine.world.gravity.x = -alpha/45;
   }
   else{
-    engine.world.gravity.x = (360-alpha)/90;
+    engine.world.gravity.x = (360-alpha)/45;
   }
 }
 
