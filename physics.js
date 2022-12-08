@@ -162,10 +162,10 @@ function handleOrientation(event) {
   const alpha = event.alpha;
   document.getElementById("alphaRotation").innerHTML = alpha;
   if (alpha < 180){
-    engine.world.gravity.x = -alpha/180;
+    engine.world.gravity.x = -alpha/90;
   }
   else{
-    engine.world.gravity.x = (360-alpha)/180;
+    engine.world.gravity.x = (360-alpha)/90;
   }
   document.getElementById("alphaRotation").innerHTML = engine.world.gravity.x;
 }
