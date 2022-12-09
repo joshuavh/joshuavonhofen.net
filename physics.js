@@ -1,6 +1,7 @@
 const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
 const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
 const links = document.getElementsByClassName( "link-container" );
+const indicator = document.getElementById( "indicator" );
 let buttonLength = vw - 60;
 if (buttonLength > 420){
     buttonLength = 420;
@@ -159,11 +160,13 @@ Matter.Events.on(mouseConstraint, 'mouseup' || 'touchend', () => {
 
 window.addEventListener('deviceorientation', handleOrientation);
 
-
 function handleOrientation(event) {
-  const alpha = event.alpha;
-  engine.world.gravity.x = -Math.sin(alpha * Math.PI) * 1;
-  engine.world.gravity.y = -Math.cos(alpha * Math.PI) * 1;
+  const alpha = -event.alpha / 180;
+  const posX = Math.sin(alpha * Math.PI) * 1;
+  const posY = Math.cos(alpha * Math.PI) * 1;
+  engine.world.gravity.x = posX;
+  engine.world.gravity.y = posY;
+  indicator.style.transform =  "translate(" + posX*20 + "px," + posY*20 + "px)";
   // if (alpha < 180){
   //   engine.world.gravity.x = -alpha/15;
   // }
