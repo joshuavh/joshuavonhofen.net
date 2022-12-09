@@ -162,12 +162,14 @@ window.addEventListener('deviceorientation', handleOrientation);
 
 function handleOrientation(event) {
   const alpha = event.alpha;
-  if (alpha < 180){
-    engine.world.gravity.x = -alpha/15;
-  }
-  else{
-    engine.world.gravity.x = (360-alpha)/15;
-  }
+  engine.world.gravity.x = -Math.sin(alpha * Math.PI) * 1;
+  engine.world.gravity.y = -Math.cos(alpha * Math.PI) * 1;
+  // if (alpha < 180){
+  //   engine.world.gravity.x = -alpha/15;
+  // }
+  // else{
+  //   engine.world.gravity.x = (360-alpha)/15;
+  // }
 }
 
 function requestPermission() {
