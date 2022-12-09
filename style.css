@@ -11,8 +11,7 @@ body{
 #portrait-container{
     width: 270px;
     position: absolute;
-    /* transform-origin: 50% 50%; */
-    top: calc(80px - 50px);
+    top: 30px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 999;
@@ -62,23 +61,38 @@ p{
 }
 
 #debugCircle{
+    height: 100px;
+    width: 100px;
+    
     position: absolute;
-    top: 24px;
-    right: 24px;
-    height: 40px;
-    width: 40px;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+
     z-index: 999;
+    border-radius: 50%;
+    border: solid 1px white;
+    display: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    border: solid 1px white;
+
 }
 
 #indicator{
-    position: absolute;
+    position: relative;
     height: 8px;
     width: 8px;
     background: orange;
     border-radius: 50%;
+}
+
+#permission{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    padding: 8px;
+    font-size: 12px;
+    border-radius: 3px;
 }

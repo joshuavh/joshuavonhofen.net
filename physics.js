@@ -60,7 +60,7 @@ for (let i = 0; i < 5; i++){
     options = {
         bodyA: boxA,
         bodyB: prevBox,
-        length: 80,
+        length: 75,
         stiffness: 0.25,
         damping: 0.5,
         render: { 
@@ -172,8 +172,8 @@ function handleOrientation(event) {
   const posX = Math.sin(alpha * Math.PI);
   const posY = Math.cos(alpha * Math.PI);
   engine.world.gravity.x = posX * 10;
-  engine.world.gravity.y = posY *10;
-  indicator.style.transform =  "translate(" + posX*20 + "px," + posY*20 + "px)";
+  engine.world.gravity.y = posY * 10;
+  indicator.style.transform =  "translate(" + posX*50 + "px," + posY*50 + "px)";
   // if (alpha < 180){
   //   engine.world.gravity.x = -alpha/15;
   // }
@@ -198,4 +198,5 @@ function requestPermission() {
       // Handle regular non iOS 13+ devices.
       window.addEventListener('devicemotion', handleOrientation);
     }
+    document.getElementById("debugCircle").style.display = "block";
   }
