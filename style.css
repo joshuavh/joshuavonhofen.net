@@ -71,8 +71,6 @@ p{
 
     z-index: 999;
     border-radius: 50%;
-    border: solid 1px white;
-    display: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -85,6 +83,7 @@ p{
     width: 8px;
     background: orange;
     border-radius: 50%;
+    display: none;
 }
 
 #permission{

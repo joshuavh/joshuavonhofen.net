@@ -198,5 +198,5 @@ function requestPermission() {
       // Handle regular non iOS 13+ devices.
       window.addEventListener('devicemotion', handleOrientation);
     }
-    document.getElementById("debugCircle").style.display = "block";
+    document.getElementById("indicator").style.display = "block";
   }
