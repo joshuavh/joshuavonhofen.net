@@ -1,6 +1,8 @@
 *{
     margin: 0;
     font-family: 'Sora', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Inter', sans-serif;
     color: white;
 }
 
@@ -20,6 +22,7 @@ body{
 
 #portrait{
     border-radius: 50%;
+    filter: grayscale(1);
 }
 
 #anchor{
