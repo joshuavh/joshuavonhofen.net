@@ -37,10 +37,16 @@ var render = Render.create({
 
 // create two boxes and a ground
 
-var boxB = Bodies.rectangle(vw/2, 170, 270, 20, { 
+var boxB = Bodies.rectangle(vw/2, 170, 2, 2, { 
     isStatic: true,
     render: {visible: false},
 });
+
+// boxB.collisionFilter = {
+//   'group': -1,
+//   'category': 2,
+//   'mask': 0,
+// };
 
 var prevBox = boxB; 
 for (let i = 0; i < 5; i++){
@@ -55,7 +61,7 @@ for (let i = 0; i < 5; i++){
         bodyA: boxA,
         bodyB: prevBox,
         length: 80,
-        stiffness: 0.5,
+        stiffness: 0.25,
         render: { 
             type: 'line', 
             anchors: false,
