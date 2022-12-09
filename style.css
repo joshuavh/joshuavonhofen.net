@@ -1,17 +1,17 @@
 *{
     margin: 0;
     font-family: 'Sora', sans-serif;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-family: 'Inter', sans-serif;
-    color: white;
+    /* font-family: 'Inter', sans-serif; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body{
-    background: rgb(29, 27, 34);
+    background: rgb(24, 23, 26);
+    color: white;
 }
 
 #portrait-container{
-    width: 270px;
     position: absolute;
     top: 30px;
     left: 50%;
@@ -29,7 +29,7 @@ body{
     width: 20px;
     height: 20px;
     position: absolute;
-    top: 170px;
+    top: 150px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;

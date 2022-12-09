@@ -37,7 +37,7 @@ var render = Render.create({
 
 // create two boxes and a ground
 
-var boxB = Bodies.rectangle(vw/2, 170, 2, 2, { 
+var boxB = Bodies.rectangle(vw/2, 150, 2, 2, { 
     isStatic: true,
     render: {visible: false},
 });
