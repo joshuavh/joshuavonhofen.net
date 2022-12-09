@@ -62,6 +62,7 @@ for (let i = 0; i < 5; i++){
         bodyB: prevBox,
         length: 80,
         stiffness: 0.25,
+        damping: 0.5,
         render: { 
             type: 'line', 
             anchors: false,
@@ -168,10 +169,10 @@ window.addEventListener('deviceorientation', handleOrientation);
 
 function handleOrientation(event) {
   const alpha = -event.alpha / 180;
-  const posX = Math.sin(alpha * Math.PI) * 1;
-  const posY = Math.cos(alpha * Math.PI) * 1;
-  engine.world.gravity.x = posX;
-  engine.world.gravity.y = posY;
+  const posX = Math.sin(alpha * Math.PI);
+  const posY = Math.cos(alpha * Math.PI);
+  engine.world.gravity.x = posX * 10;
+  engine.world.gravity.y = posY *10;
   indicator.style.transform =  "translate(" + posX*20 + "px," + posY*20 + "px)";
   // if (alpha < 180){
   //   engine.world.gravity.x = -alpha/15;
