@@ -66,7 +66,7 @@ for (let i = 0; i < 5; i++){
         render: { 
             type: 'line', 
             anchors: false,
-            lineWidth: 1.5,
+            lineWidth: 1,
             strokeStyle: 'white'
         }
     }
@@ -199,4 +199,5 @@ function requestPermission() {
       window.addEventListener('devicemotion', handleOrientation);
     }
     document.getElementById("indicator").style.display = "block";
+    document.getElementById("permission").style.display = "none";
   }
